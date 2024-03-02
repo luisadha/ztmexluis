@@ -19,7 +19,7 @@ echo " Luis User Interactive Script a.k.a LUIS Toolbox"
 echo " version : v1.2 "
 #echo "-------------------------------------------"
 printf %"$(tput cols)"s | tr " " "-"
-echo -e "\nRun script as interactively from repository\nWiki bahasa : <>
+echo -e "\nRun script as interactively from repository\nWiki bahasa : <https://telegra.ph/Apa-itu-Ztmexluis-03-02>
 help translate you can send to mail: <adharudin14@gmail.com>"
 printf %"$(tput cols)"s | tr " " "-"
 
