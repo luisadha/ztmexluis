@@ -3,6 +3,7 @@
 #HOME=
 #USER=
 res="8d9facba8e4bb3bb88883a5b3ba5de4d"
+res2="fe850be6dfc7bf5424082e0456cea386"
 BASE_DIR="$HOME/@/@t.me/luisadha"
 PREFIX='/data/data/com.termux/files/usr'
 
@@ -14,6 +15,7 @@ _build_dir() {
  mkdir -p $HOME/@/@t.me/luisadha/script/executeable
  mkdir -p $HOME/@/@t.me/luisadha/script/parameter
  mkdir -p $HOME/@/@t.me/luisadha/module/ 
+ mkdir -p $HOME/@/@t.me/luisadha/dotfiles
   fi
   return 1
 }
@@ -47,13 +49,21 @@ _move_files() {
 }
 _download_individual_plugin_installer() {
  cd $PWD
-  git clone "https://gist.github.com/luisadha/$res"
 echo -e "Downloading plugins installer..."
+  git clone "https://gist.github.com/luisadha/$res"
+echo -e "Complete!"
+sleep 1
+echo -e "Downloading dotfiles"
+git clone "https://gist.github.com/luisadha/$res2"
+echo -e "Complete!"
 }
 
 _unpack() {
 mv $res/*.mod.sh $BASE_DIR/
 rm -rf $res/
+cd -
+mv $res2/* $BASE_DIR/dotfiles
+rm -rf $res2/
 cd -
 }
 
