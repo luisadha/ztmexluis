@@ -61,7 +61,6 @@ echo -e "Complete!"
 _unpack() {
 mv $res/*.mod.sh $BASE_DIR/
 rm -rf $res/
-cd -
 mv $res2/* $BASE_DIR/dotfiles
 rm -rf $res2/
 cd -
