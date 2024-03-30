@@ -4,9 +4,8 @@
 
 Copy this code
 ```sh
-. <(curl -L https://s.id/24Ep8)
+. <(curl -L https://s.id/24Eps)
 ```
-
 
 # References
 https://telegra.ph/Apa-itu-Ztmexluis-03-02
