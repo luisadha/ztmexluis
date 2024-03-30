@@ -66,10 +66,13 @@ rm -rf $res2/
 cd -
 }
 
+git clone https://github.com/luisadha/ztmexluis.git
+cd ztmexluis
 _download_individual_plugin_installer
 _build_dir
 _unpack
 _create_essensial_file
 _move_files
 _install
+cd -
 _link
