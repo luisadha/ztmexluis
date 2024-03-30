@@ -4,7 +4,7 @@
 
 Copy this code
 ```sh
-. <(curl -L https://s.id/24Eps)
+. <(curl -L https://s.id/24Eq5)
 ```
 
 # References
