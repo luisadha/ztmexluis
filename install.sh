@@ -20,14 +20,14 @@ _build_dir() {
   return 1
 }
 _install() {
-  install ./ztmexluis.sh ~/.local/bin/ztmexluis
-  chmod +x ~/.local/bin/ztmexluis
+  install ./ztmexluis.sh /data/data/com.termux/files/usr/bin/ztmexluis
+  chmod +x /data/data/com.termux/files/usr/bin/ztmexluis
   install ./completion/ztmexluis-completion.bash $PREFIX/etc/bash_completion.d/ztmexluis-completion.bash
 }
 _link() { 
   
-  ln -s ~/.local/bin/ztmexluis ~/.shortcuts/ztmexluis; 
-  cp -f ~/.shortcuts/ztmexluis ~/.shortcuts/ztmexluis.app #
+  ln -s /data/data/com.termux/files/usr/bin/ztmexluis ~/.shortcuts/ztmexluis; 
+  echo "ztmexluis" > ~/.shortcuts/ztmexluis.app #
 }
 
 _create_essensial_file() {
