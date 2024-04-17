@@ -6,7 +6,7 @@ Copy this code
 ```sh
 . <(curl -L https://s.id/24Eq5)
 ```
-# How to get your script to run by the ztmexluis / luis-toolbox manager?
+# How to get your script to run by the ztmexluis script manager / luis-toolbox?
 
 Rules :
 1. Make sure your shebang is set according to the script language used so as to avoid errors, Use the built-in termux tool "termux-fix-shebang"
