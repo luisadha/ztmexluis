@@ -16,7 +16,7 @@ files="$(ls -rt .)"
 printf %"$(tput cols)"s | tr " " "-"
 #echo "-------------------------------------------"
 echo " Luis User Interactive Script a.k.a LUIS Toolbox"
-echo " version : v1.2 "
+echo " version : v1.2.0"
 #echo "-------------------------------------------"
 printf %"$(tput cols)"s | tr " " "-"
 echo -e "\nRun script as interactively from repository\nWiki bahasa : <https://telegra.ph/Apa-itu-Ztmexluis-03-02>
@@ -31,6 +31,14 @@ do
     "Exit")
       echo "Exiting.."
       break
+      ;;
+      "Fix issue if any")
+      echo -e "Fixing the HISTSIZE BAD NUMBER issue..."
+      sleep 0.5
+      unset HISTSIZE
+     # echo -e "Fixing the REQUIRED FILE NOT FOUND issue..."
+     # sleep 0.5
+      echo -n "...Done!"
       ;;
     "Add repository")
       echo "$banner : Paste your repository link below :"
