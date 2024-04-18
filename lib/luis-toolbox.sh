@@ -23,7 +23,7 @@ echo -e "\nRun script as interactively from repository\nWiki bahasa : <https://t
 help translate you can send to mail: <adharudin14@gmail.com>"
 printf %"$(tput cols)"s | tr " " "-"
 
-select filename in ${files} "Add repository" Exit;
+select filename in ${files} "Add repository" "Fix issue if any" Exit;
 do
 [[ -n $filename ]] || { echo "$warn :What's that? Please try again." >&2; continue; }
  
