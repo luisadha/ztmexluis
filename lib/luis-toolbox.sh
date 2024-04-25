@@ -38,7 +38,7 @@ do
       unset HISTSIZE
      # echo -e "Fixing the REQUIRED FILE NOT FOUND issue..."
      # sleep 0.5
-      echo -ne "...Done!\n"
+      echo -n "...Done!"
       ;;
     "Add repository")
       echo "$banner : Paste your repository link below :"
