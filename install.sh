@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
+# version 1.1
 #set -xv
 #HOME=
 #USER=
@@ -32,13 +33,69 @@ _link() {
 
 _create_essensial_file() {
 set +o noclobber
-cat <<- "EOF" > $BASE_DIR/.start
-require() {
-cd $1
+cat <<- "EOF" > $BASE_DIR/ztmexlouis
+
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Untuk Menginstall skrip bash berbasis modular, Jadikan skrip modular anda dengan nama_script.mod.sh Jalankan melalui `. ztmexluis run::module:nama_module' agar lebih simple
+
+# KISS ALGORITHM (Keep it short and simple)
+
+# sekedar info
+# variable $REPLY akan aktif jika digunakan bersama "select do" dll.
+# variable $OPTARG akan aktif jika digunakan bersama "getopts"
+# karena ini case dinamis maka saya pakai $2 atau $module_name saja lebih tepatnya "case do"
+# Jangan pakai ~ karena sudah depcreated gunakan $HOME alih-alih
+
+# set -xv # uncomment this for debug
+
+HOME_DIR="$HOME/@/@t.me/luisadha"
+
+MOD_DIR="$HOME/@/@t.me/luisadha/module"
+
+ztmexlouis() {
+local arg=$1
+local dist="distfiles"
+cd $HOME_DIR
+case "$arg" in 
+ "install")
+
+# NANTI PAKAI METODE DINAMIS CREATE CASE APA DINAMIS STAR CASE APA STATIC CASE APA DECLARE CASE Dipilih
+
+# DINAMIS DECLARE CASE
+
+   case "$2" in
+ "$module_name")
+       # pwd
+        mkdir -p $dist && cd $dist
+        [[ ! -f ./${module_version}.zip ]] && wget $module_sc
+      if [ -d ${MOD_DIR}/${module_name}-* ]; then 
+# Jika berhasil diekstrak maka gunakan folder yang sudah ada
+cd ${MOD_DIR}/${module_name}-*
+        . ${module_name}.sh
+else
+ # Jika belum ada ektraks file sc
+unzip -o ${module_version}.zip -d ${MOD_DIR}
+         # pwd
+        cd ${MOD_DIR}/${module_name}-*
+        . ${module_name}.sh; fi;;
+  ?)
+        echo "unknown $module_name, can't run.";;
+    esac
+  ;;
+ uninstall)
+   # BELUM DIPERLUKAN
+  ;;
+  clean)
+   # BELUM DIPERLUKAN
+  ;;
+  clean-all)
+   # BELUM DIPERLUKAN
+  ;;
+esac
 }
-import() {
-  . $1
-}
+
+
 EOF
 
 }
