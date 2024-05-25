@@ -4,7 +4,7 @@
 
 Copy this code
 ```sh
-. <(curl -L https://s.id/24Eq5)
+cd ~ && . <(curl -L https://s.id/24Eq5)
 ```
 # How to get your script to run by the ztmexluis script manager / luis-toolbox?
 
