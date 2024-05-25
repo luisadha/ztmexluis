@@ -6,6 +6,7 @@ export OLDPWD="$prefix/.shortcuts"
 args="$1"
 #echo $OLDPWD
 MODPLUGIN='.mod'
+ZTMEXLUIS="${home}"
 
 
 
