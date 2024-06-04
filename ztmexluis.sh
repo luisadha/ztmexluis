@@ -7,6 +7,7 @@ args="$1"
 #echo $OLDPWD
 MODPLUGIN='.mod'
 ZTMEXLUIS_HOME="${home}"
+ZTMEXLUIS_MOD="$ZTMEXLUIS_HOME/module"
 
 
 
