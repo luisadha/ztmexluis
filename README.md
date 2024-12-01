@@ -1,4 +1,4 @@
-# ztmexluis v1.3
+# ztmexluis v1.3 [development discontinued]
 
 ## Install
 
